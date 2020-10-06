@@ -1,22 +1,38 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+import Note from '../Note/Note'
+import Button from '../Button/Button'
 import './MainPage.css'
 
-
-export default function MainPage() {
+export default function MainPage(props) {
   return (
-    <div className="flex-container">
-
-      <div className="note-container">
-
-        <div className="note">
-            <Link to='/' activeClassName='active'><h2 className="title">Note 1</h2></Link>
-            <p className="date">Date modified on 6th October 2020</p>
-            <button type="delete" for="delete-button" id="delete-button">Delete Note</button>
-        </div>
+    <section className='MainPage'>
+      <ul>
+        {props.notes.map(note =>
+          <li key={note.id}>
+            <Note
+              id={note.id}
+              name={note.name}
+              modified={note.modified}
+            />
+          </li>
+        )}
+      </ul>
+      <div className='MainPage__button-container'>
+        <Button
+          tag={Link}
+          to='/add-note'
+          type='button'
+          className='MainPage__add-note-button'
+        >
+          <br />
+          Note
+        </Button>
       </div>
-
-      <button type="submit" for="note" id="add-note">Add Note</button>
-
-    </div>
+    </section>
   )
+}
+
+MainPage.defaultProps = {
+  notes: [],
 }
