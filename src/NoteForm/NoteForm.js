@@ -1,7 +1,8 @@
 import React from 'react'
-import './AddNote.css'
+import './NoteForm.css'
 
 export default function NoteForm() {
+  const { className, ...otherProps } = props
   return (
     <div className="flex-container">
       <div className="back-container">
@@ -10,7 +11,7 @@ export default function NoteForm() {
       <div className="add-note-container">
         <div className="add-note">
           <fieldset>
-            <legend><h2 className="title">Create a Note</h2></legend>
+            <h2 className="title">Create a Note</h2>
             <label for="add-note-name">Name</label>
             <input for="add-note-name" />
 
