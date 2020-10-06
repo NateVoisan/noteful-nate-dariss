@@ -1,0 +1,21 @@
+.folder-container {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+}
+
+.note-container {
+    display: flex;
+    flex: 2;
+    flex-direction: row;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+}
+
+header {
+    justify-content: center;
+    text-align: center;
+}
