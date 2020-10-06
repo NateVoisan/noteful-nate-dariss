@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route, Link } from 'react-router-dom';
 import MainPage from './Main/MainPage';
-import AddNote from './AddNote/AddNote';
+import NoteForm from './NoteForm/NoteForm';
 import FolderNavs from './FolderNavs/FolderNavs';
 
 function App() {

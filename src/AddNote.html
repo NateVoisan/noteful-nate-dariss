@@ -16,17 +16,19 @@
             <div className="back-container">
                 <nav className="back-nav"><button type="submit" for="back-nav" id="back-nav">Back</button></nav>
             </div>
-            <div className="note-container">
-                <div className="note">
+            <div className="add-note-container">
+                <div className="add-note">
                     <fieldset>
-                    <legend><h2 className="title">Note 1</h2></legend>
-                    <p className="date">Date modified on 6th October 2020</p>
-                    <button type="delete" for="delete-button" id="delete-button">Delete Note</button>
+                    <legend><h2 className="title">Create a Note</h2></legend>
+                    <label for="add-note-name">Name</label>
+                    <input for="add-note-name">
+                    <label for="add-note-content">Content</label>
+                    <input for="add-note-content">
+                    <label for="add-note-folder">Folder</label>
+                    <input for="add-note-content">
+                    <button type="submit" for="add-button" id="add-button">Add Note</button>
                 </fieldset>
                 </div>
-            </div>
-            <div className="note-description-container">
-                <p className="note-description">Lorem ipsum blah blah description stuff blah blah</p>
             </div>
             </div>
         </div>
