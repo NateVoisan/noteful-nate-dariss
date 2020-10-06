@@ -8,6 +8,7 @@ export default function AddNote() {
         <h1>Noteful</h1>
       </header>
       <hr />
+
       <div className="flex-container">
         <div className="back-container">
           <nav className="back-nav"><button type="submit" for="back-nav" id="back-nav">Back</button></nav>
@@ -17,16 +18,18 @@ export default function AddNote() {
             <fieldset>
               <legend><h2 className="title">Create a Note</h2></legend>
               <label for="add-note-name">Name</label>
-              <input for="add-note-name">
-                <label for="add-note-content">Content</label>
-                <input for="add-note-content">
-                  <label for="add-note-folder">Folder</label>
-                  <input for="add-note-content">
-                    <button type="submit" for="add-button" id="add-button">Add Note</button>
-     </fieldset>
-     </div>
- </div>
- </div>
+              <input for="add-note-name" />
+
+              <label for="add-note-content">Content</label>
+              <input for="add-note-content" />
+
+              <label for="add-note-folder">Folder</label>
+              <input for="add-note-content" />
+              <button type="submit" for="add-button" id="add-button">Add Note</button>
+            </fieldset>
           </div>
-          )
+        </div>
+      </div>
+    </div>
+  )
 }

@@ -1,12 +1,12 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import MainPage from './MainPage'
+import FolderNavs from './FolderNavs'
 
-
-test('render without error', () => {
+test('renders without errors', () => {
   const div = document.createElement('div');
+
   ReactDOM.render(
-    <MainPage />,
+    <FolderNavs />,
     div
   );
   ReactDOM.unmountComponentAtNode(div);
