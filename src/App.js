@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Route, Link } from 'react-router-dom';
-import { getNotesForFolder, findNote, findFolder } from './HelperFunctions';
 import MainPage from './MainPage/MainPage';
 import FolderNavs from './FolderNavs/FolderNavs';
 import NoteBack from './NoteBack/NoteBack';
@@ -42,7 +41,6 @@ class App extends Component {
   };
 
   renderNavRoutes() {
-    const { notes, folders } = this.state;
     return (
       <>
         {['/', '/folder/:folderId'].map(path => (

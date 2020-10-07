@@ -7,7 +7,7 @@ import './Note.css'
 
 export default class Note extends React.Component {
   static defaultProps = {
-    onDeleteNote: () => {},
+    onDeleteNote: () => { },
   }
   static contextType = ApiContext;
 
@@ -15,7 +15,7 @@ export default class Note extends React.Component {
     e.preventDefault();
     const noteId = this.props.id
 
-    fetch(`${config.API_ENDPOINT}/notes.${noteId}`, {
+    fetch(`${config.API_ENDPOINT}/notes/${noteId}`, {
       method: 'DELETE',
       headers: {
         'content-type': 'application/json'
@@ -39,14 +39,15 @@ export default class Note extends React.Component {
     const { name, id, modified } = this.props
     return (
       <div className='Note'>
-        <h2 className='Note__title'>
+        <h2 className='Note__title'> 
           <Link to={`/note/${id}`}>
             {name}
           </Link>
         </h2>
-        <button className='Note__delete'
-        type='button'
-        onClick={this.handleClickDelete}
+        <button 
+          className='Note__delete'
+          type='button'
+          onClick={this.handleClickDelete}
         >
           {' '}
         remove
@@ -56,7 +57,7 @@ export default class Note extends React.Component {
             Modified
           {' '}
             <span className='Date'>
-              {/* {format(modified, 'Do MMM YYYY')} */}
+              {format(new Date(modified), 'dd-MM-yyyy')}
             </span>
           </div>
         </div>
